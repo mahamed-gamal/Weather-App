@@ -8,6 +8,8 @@ target 'Weather' do
   # Pods for Weather
     pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Alamofire'
+  pod 'Kingfisher'
   target 'WeatherTests' do
     inherit! :search_paths
     # Pods for testing
