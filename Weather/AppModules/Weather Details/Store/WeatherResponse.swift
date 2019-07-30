@@ -22,6 +22,7 @@ struct WeatherResponse: CodableInit {
     let timezone, id: Int?
     let name: String?
     let cod: Int?
+    
 }
 
 // MARK: - Clouds

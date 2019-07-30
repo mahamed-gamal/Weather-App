@@ -30,6 +30,7 @@ protocol URLRequestBuilder: URLRequestConvertible, APIRequestHandler {
     var deviceId: String { get }
 }
 
+
 extension URLRequestBuilder {
     var mainURL: URL {
         return URL(string: "https://api.openweathermap.org/data/2.5")!

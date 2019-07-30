@@ -13,6 +13,7 @@ class WeatherDetailsViewController: UIViewController {
     
     var data: CityModel?
     
+    @IBOutlet weak var holderStack: UIStackView!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var maxDegree: UILabel!
     @IBOutlet weak var minDegree: UILabel!
@@ -29,16 +30,25 @@ class WeatherDetailsViewController: UIViewController {
             switch response{
             case .success(let value):
                 print(value)
-                self.currentDegree.text = "\(value.main?.temp ?? 0)"
-                self.minDegree.text = "\(value.main?.tempMin ?? 0)"
-                self.maxDegree.text = "\(value.main?.tempMax ?? 0)"
-                self.descriptionLabel.text = "\(value.name ?? "")"
-//                let url = URL(string: "weather3")
-//                self.img.kf.setImage(with: url)
+                self.currentDegree.text = Converter.fahrenheitToCelsius(tempInF:  value.main?.temp ?? 0).rounded().string
+                self.minDegree.text = Converter.fahrenheitToCelsius(tempInF: value.main?.tempMin ?? 0).rounded().string
+                self.maxDegree.text = Converter.fahrenheitToCelsius(tempInF: value.main?.tempMax ?? 0).rounded().string
+                self.descriptionLabel.text = value.sys?.country
+                self.animateLabels()
             case .failure(let error):
                 print(error)
                 
             }
         }
     }
+    
+    func animateLabels(){
+        UIView.animate(withDuration: 0.3) {
+            self.holderStack.subviews.forEach({ (view) in
+                view.isHidden = false
+            })
+        }
+    }
 }
+
+

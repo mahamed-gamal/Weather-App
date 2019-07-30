@@ -17,6 +17,8 @@
 		86506CA722ECF57D00DC635A /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86506CA522ECF57D00DC635A /* WeatherRequest.swift */; };
 		86506CA822ECF57D00DC635A /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86506CA622ECF57D00DC635A /* WeatherResponse.swift */; };
 		866859B922E76A6200694EEC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866859B822E76A6200694EEC /* TabBarViewController.swift */; };
+		866B159D22EFC1D200FFA23E /* Double+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866B159C22EFC1D200FFA23E /* Double+String.swift */; };
+		866B15A022EFC24200FFA23E /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866B159F22EFC24200FFA23E /* Converter.swift */; };
 		8679BD0122EA0723002FBF4A /* MapViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8679BD0022EA0723002FBF4A /* MapViewFactory.swift */; };
 		869EDE5F22E6610A004EE56F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869EDE5E22E6610A004EE56F /* AppDelegate.swift */; };
 		869EDE6622E6610B004EE56F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 869EDE6522E6610B004EE56F /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		86506CA522ECF57D00DC635A /* WeatherRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
 		86506CA622ECF57D00DC635A /* WeatherResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		866859B822E76A6200694EEC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		866B159C22EFC1D200FFA23E /* Double+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+String.swift"; sourceTree = "<group>"; };
+		866B159F22EFC24200FFA23E /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		8679BD0022EA0723002FBF4A /* MapViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewFactory.swift; sourceTree = "<group>"; };
 		869EDE5B22E6610A004EE56F /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869EDE5E22E6610A004EE56F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +170,22 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		866B159B22EFC17300FFA23E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				866B159C22EFC1D200FFA23E /* Double+String.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		866B159E22EFC22B00FFA23E /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				866B159F22EFC24200FFA23E /* Converter.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		869EDE5222E6610A004EE56F = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +227,8 @@
 		869EDE7E22E661AD004EE56F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				866B159E22EFC22B00FFA23E /* Logic */,
+				866B159B22EFC17300FFA23E /* Extension */,
 				86506C9922ECF17500DC635A /* Network */,
 				869EDE7F22E661B8004EE56F /* Assets */,
 			);
@@ -484,7 +506,9 @@
 			files = (
 				86506C9E22ECF1A800DC635A /* APIRequestHandler.swift in Sources */,
 				86CC2F2B22E8FD8900BACDFD /* StaticAPIsKeys.swift in Sources */,
+				866B159D22EFC1D200FFA23E /* Double+String.swift in Sources */,
 				86506C9F22ECF1A800DC635A /* CodableInit.swift in Sources */,
+				866B15A022EFC24200FFA23E /* Converter.swift in Sources */,
 				86506CA722ECF57D00DC635A /* WeatherRequest.swift in Sources */,
 				86506CA022ECF1A800DC635A /* ResponseHandler.swift in Sources */,
 				866859B922E76A6200694EEC /* TabBarViewController.swift in Sources */,
